@@ -7,6 +7,7 @@
 
 body,
 html {
+  background: #eff0f0;
   overflow-x: hidden;
 }
 
@@ -17,6 +18,7 @@ a {
 /* Стили навигации */
 .navigation .toggle, .navigation #checkbox-menu {
   display: none;
+  color: #000;
 }
 .navigation nav {
   margin: 0 auto;
@@ -43,14 +45,58 @@ a {
   transition: backgroung 0.2s linear;
 }
 .navigation .menu li a:hover {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px #5c2715;
 }
 
+/*Адаптив навигации (бургер)*/
+@media screen and (max-width: 765px) {
+  .navigation .toggle {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    width: 100%;
+    color: #000;
+    background: #5c2715;
+    transition: all 0.1s linear;
+  }
+  .navigation #checkbox-menu:checked + label .touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s linear;
+  }
+  .navigation #checkbox-menu:checked + label .touch {
+    height: 350px;
+  }
+  .navigation .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0;
+    transition: height 0.3s linear;
+  }
+  .navigation .menu li {
+    display: flex;
+    align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .navigation .menu li a {
+    width: 95%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+  }
+}
 /* Стили шапки */
 .head {
   width: 100%;
   height: 140px;
   background: #5c2715;
+  /*Адаптив шапки*/
 }
 .head .wrapper {
   display: flex;
@@ -99,19 +145,164 @@ a {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
+@media screen and (max-width: 1460px) {
+  .head__button input[type=text] {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 300px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .head__logo {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .head__text {
+    display: none;
+  }
+}
+@media screen and (max-width: 735px) {
+  .head__button input[type=text] {
+    width: 150px;
+    font-size: 10px;
+  }
+  .head__button input[type=submit] {
+    width: 45px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .head a {
+    width: 140px;
+  }
+  .head__logo {
+    margin-left: -10px;
+  }
+  .head__button input[type=text] {
+    font-size: 8px;
+    width: 100px;
+    margin-left: -5px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .head__button input[type=text] {
+    width: 90px;
+  }
+  .head__button input[type=submit] {
+    font-size: 8px;
+    width: 30px;
+  }
+}
 
 /* Стили каталога */
 .category .wrapper {
+  display: flex;
   max-width: 1600px;
   width: 100%;
-  height: 1400px;
+  height: 100%;
   margin: 0 auto;
-  background: #000;
+}
+.category__listblock {
+  width: 30%;
+}
+.category__catalog {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+.category__list {
+  border: #5c2715 3px solid;
+  position: fixed;
+  top: 300px;
+  left: 10%;
+  width: 20%;
+  height: 500px;
+}
+.category__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 30px;
+  justify-items: center;
+  margin-top: 110px;
+  margin-bottom: 100px;
+  width: 100%;
+  padding-top: 30px;
+}
+@media screen and (max-width: 1600px) {
+  .category__cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .category__list {
+    left: 7%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .category__listblock {
+    display: none;
+  }
+  .category__catalog {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 765px) {
+  .category__cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+@media screen and (max-width: 520px) {
+  .category__cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+}
+.category__card {
+  margin: 0;
+  width: 250px;
+  height: 220px;
+}
+.category__card__img {
+  border: black 1px solid;
+  width: 250px;
+  height: 170px;
+}
+.category__card__container {
+  border: black 1px solid;
+  width: 250px;
+  height: 50px;
+}
+.category__title {
+  text-align: center;
+  margin-top: 10px;
+}
+.category__sublist {
+  list-style-type: none;
+  margin-top: 50px;
+}
+.category__text {
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 30px;
+  font-size: 20px;
+}
+.category__text:hover {
+  text-decoration: underline;
+}
+.category a {
+  text-decoration: none;
+  color: #000;
 }
 
 /*Стили подвала*/
 .footer {
   background: #5c2715;
+  /*Адаптив подвала*/
 }
 .footer .wrapper {
   max-width: 1600px;
@@ -146,6 +337,7 @@ a {
 }
 @media (max-width: 450px) {
   .footer__text {
+    font-size: 10px;
     padding-left: 2px;
   }
 }

@@ -44,13 +44,133 @@
              </div>
         </section>
     </header>
+    <!-- БЛОК КАТАЛОГА -->
     <main>
         <section class="category">
             <div class="wrapper">
+                <div class="category__listblock">
+                    <div class="category__list">
+                        <h2 class="category__title">Категории</h2>
+                        <ul class="category__sublist">
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                            <li class="category__text"><a href="#">lorem</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category__catalog">
+                    <div class="category__cards">
+                        <div class="category__card">
+                            <div class="category__card__img">
 
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div><div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                        <div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+    <!-- БЛОК ПОДВАЛА -->
     <footer class="footer" id = "contacts">
         <div class="wrapper">
             <div class="footer__inner">
@@ -72,6 +192,8 @@
             </div>
         </div>
     </footer>
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ -->
+    <!-- ИКОНКИ -->
     <script src="https://kit.fontawesome.com/dd4a236084.js" crossorigin="anonymous"></script>
 </body>
 </html>
