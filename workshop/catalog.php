@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- СТРЕЛКА ДЛЯ ПРОКРУТКИ СТРАНИЦЫ ВВЕРХ -->
+    <div id="toTop">
+        <div class="arrow">
+          <span class="arrow__left"></span>
+          <span class="arrow__right"></span>
+       </div>
+    </div>
+    <!-- ШАПКА САЙТА -->
     <header>
         <!-- БЛОК НАВИГАЦИИ -->
         <section class = "navigation">
@@ -23,7 +31,7 @@
                     <li><a href="#">Оплата</a></li>
                     <li><a href="#">Доставка</a></li>
                     <li><a href="#">Возврат и гарантия</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#contacts" id = "Down">Контакты</a></li>
                 </ul>
                 <span class="toggle">☰</span>
                 </label>
@@ -70,101 +78,110 @@
                 </div>
                 <div class="category__catalog">
                     <div class="category__cards">
-                        <div class="category__card">
+                        <a href="#up" id="card-1"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-2"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-3"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-4"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div><div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-5"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-6"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-7"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-8"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-9"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-10"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-11"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
-                        <div class="category__card">
+                        </div></a>
+                        <a href="#up" id="card-12"><div class="category__card">
                             <div class="category__card__img">
 
                             </div>
                             <div class="category__card__container">
                                 
                             </div>
-                        </div>
+                        </div></a>
+                        <a href="#up" id="card-13"><div class="category__card">
+                            <div class="category__card__img">
+
+                            </div>
+                            <div class="category__card__container">
+                                
+                            </div>
+                        </div></a>
                     </div>
                 </div>
             </div>
@@ -192,8 +209,36 @@
             </div>
         </div>
     </footer>
+    <!-- Скрытый блок с подробной информацией ою услугах -->
+    <div class="product" id = "prodAnchor">
+        <div class="product__inner">
+            <div class="product__text">
+                <div class="product__title">Цены на послегарантийный ремонт фотоаппаратов</div>
+            </div>
+            <div class="product__price">
+                <table>
+                    <tr><td class="product__info">Название</td><td class="product__cost__logo">Стоимость</td></tr>
+                    <tr><td class="product__info info1">Чистка видоискателя</td><td class="product__cost cost1">от 500 рублей</td></tr>
+                    <tr><td class="product__info info2">Чистка матрицы</td><td class="product__cost cost2">от 1200 рублей</td></tr>
+                    <tr><td class="product__info info3">Настройка (юстировка) автофокуса</td><td class="product__cost cost3">от 2200 рублей</td></tr>
+                    <tr><td class="product__info info4">Ремонт "битых" пикелей</td><td class="product__cost cost4">от 2200 рублей</td></tr>
+                    <tr><td class="product__info info5">Ремонт слота карты памяти</td><td class="product__cost cost5">от 500 рублей</td></tr>
+                    <tr><td class="product__info info6">Ремонт и замена затвора</td><td class="product__cost cost6">от 600 рублей</td></tr>
+                    <tr><td class="product__info info7">PRO-диагностика, экспертная оценка</td><td class="product__cost cost7">от 1700 рублей</td></tr>
+                    <tr><td class="product__info info8">Предварительная диагностика</td><td class="product__cost cost8">бесплатно</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--    Фон для невидимых блоков -->
+    <div class="popup__bg"></div>
     <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ -->
     <!-- ИКОНКИ -->
     <script src="https://kit.fontawesome.com/dd4a236084.js" crossorigin="anonymous"></script>
+    <!-- ПОДКЛЮЧЕНИЕ JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script  src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
+    <!-- СКРИПТ -->
+    <script src="js/script.js"></script>
 </body>
 </html>
