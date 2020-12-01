@@ -288,12 +288,20 @@
             border: black 1px solid;
             width: 250px;
             height: 170px;
+            vertical-align: top;
           }
           &__container {
             border: black 1px solid;
             width: 250px;
             height: 50px;
+            p {
+                text-align: center;
+                margin-top: 15px;
+            }
           }
+      }
+      &__card:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); ;
       }
       &__title {
           text-align: center;

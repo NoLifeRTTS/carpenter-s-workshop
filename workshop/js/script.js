@@ -16,7 +16,7 @@ $('#toTop').click(function() {
 });
 
 // Для отображения блока, который выбрали, а также для его скрытия
-$("#card-1").click(function(){
+$("#categ-1").click(function(){
     $(".product").addClass("popup__active");
     $(".popup__bg").fadeIn();
     $(".product__title").html("Цена на послегарантийный ремонт фотоаппаратов");
@@ -42,7 +42,7 @@ $("#card-1").click(function(){
         });
 });
 
-$("#card-2").click(function(){
+$("#categ-2").click(function(){
     $(".product").addClass("popup__active");
     $(".popup__bg").fadeIn();
     $(".product__title").html("Цена на послегарантийный ремонт фотоаппаратов");
@@ -62,6 +62,15 @@ $("#card-2").click(function(){
     $(".cost6").html("от 600 рублей");
     $(".cost7").html("от 1700 рублей");
     $(".cost8").html("бесплатно");
+        $(".popup__bg").click(function(){
+           $(".product").removeClass("popup__active");
+            $(".popup__bg").fadeOut();
+        });
+});
+
+$("#categ__add").click(function(){
+    $(".product").addClass("popup__active");
+    $(".popup__bg").fadeIn();
         $(".popup__bg").click(function(){
            $(".product").removeClass("popup__active");
             $(".popup__bg").fadeOut();

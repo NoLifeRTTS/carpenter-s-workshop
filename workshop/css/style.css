@@ -271,11 +271,19 @@ a {
   border: black 1px solid;
   width: 250px;
   height: 170px;
+  vertical-align: top;
 }
 .category__card__container {
   border: black 1px solid;
   width: 250px;
   height: 50px;
+}
+.category__card__container p {
+  text-align: center;
+  margin-top: 15px;
+}
+.category__card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 .category__title {
   text-align: center;

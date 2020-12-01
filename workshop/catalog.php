@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    $conn = mysqli_connect('localhost', 'mysql', 'mysql');
+    $select_db = mysqli_select_db($conn, 'workshop');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,126 +65,46 @@
                     <div class="category__list">
                         <h2 class="category__title">Категории</h2>
                         <ul class="category__sublist">
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
-                            <li class="category__text"><a href="#">lorem</a></li>
+                            <?php
+                                $query = "SELECT categoryName, categoryId FROM categories ";
+                                $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+                                if($result) {
+                                    $rows = mysqli_num_rows($result); // количество полученных строк
+                                    for ($i = 0 ; $i < $rows ; ++$i) {
+                                    $row = mysqli_fetch_row($result);
+                            ?>
+                                    <li class="category__text"><a href="<?php echo $row[1] ?>"><?php echo $row[0] ?></a></li>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
                 <div class="category__catalog">
                     <div class="category__cards">
-                        <a href="#up" id="card-1"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
+                        <?php
+                            $query1 = "SELECT categoryName, link, categoryId FROM categories ";
+                            $result1 = mysqli_query($conn, $query1) or die(mysqli_error($conn));
+                            if($result1) {
+                                $rows = mysqli_num_rows($result1); // количество полученных строк
+                                for ($i = 0 ; $i < $rows ; ++$i) {
+                                $row = mysqli_fetch_row($result1);
+                        ?>
+                                    <a href="#up" id="<?php echo $row[2] ?>"><div class="category__card">
+                                        <img class="category__card__img" src="<?php echo $row[1] ?>" alt="">
+                                        <div class="category__card__container">
+                                            <p class="name"><?php echo $row[0] ?></p>
+                                        </div>
+                                    </div></a>
+                        <?php
+                                }
+                            }
+                        ?>
+                        <a href="#up" id="categ__add"><div class="category__card">
+                            <img class="category__card__img" src="/img/plus.png" alt="">
                             <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-2"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-3"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-4"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-5"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-6"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-7"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-8"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-9"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-10"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-11"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-12"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
-                            </div>
-                        </div></a>
-                        <a href="#up" id="card-13"><div class="category__card">
-                            <div class="category__card__img">
-
-                            </div>
-                            <div class="category__card__container">
-                                
+                                <p class="name">Добавить категорию</p>
                             </div>
                         </div></a>
                     </div>
@@ -209,7 +134,7 @@
             </div>
         </div>
     </footer>
-    <!-- Скрытый блок с подробной информацией ою услугах -->
+    <!-- Скрытый блок с подробной информацией о категории -->
     <div class="product" id = "prodAnchor">
         <div class="product__inner">
             <div class="product__text">
@@ -229,6 +154,13 @@
                 </table>
             </div>
         </div>
+    </div>
+    <!-- Скрытый блок с добавлением новой категории -->
+    <div class="product" id = "prodAnchor">
+        <form action="addpic.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="picture">
+            <input type="submit" value="Загрузить">
+        </form>
     </div>
     <!--    Фон для невидимых блоков -->
     <div class="popup__bg"></div>
