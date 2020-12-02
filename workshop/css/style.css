@@ -524,3 +524,95 @@ a {
   opacity: 0.7;
   display: none;
 }
+
+.categ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  position: fixed;
+  left: 43%;
+  top: 20%;
+  border-radius: 10px;
+  background: #c5d5cb;
+  width: 400px;
+  height: 400px;
+  transform: scale(0);
+  transition: 0.5s all ease;
+}
+.categ.popup__active {
+  transform: scale(1);
+}
+.categ h2 {
+  text-align: center;
+}
+.categ form {
+  text-align: center;
+}
+.categ form input[type=submit] {
+  width: 238px;
+}
+.categ form input[type=file] {
+  width: 238px;
+  margin-left: 130px;
+  color: #c5d5cb;
+  font-size: 12px;
+}
+.categ form input {
+  margin-top: 5px;
+}
+.categ form a {
+  text-align: center;
+}
+@media (max-width: 1004px) {
+  .categ {
+    left: 30%;
+  }
+}
+@media (max-width: 860px) {
+  .categ {
+    left: 25%;
+  }
+}
+@media (max-width: 760px) {
+  .categ {
+    left: 20%;
+  }
+}
+@media (max-width: 660px) {
+  .categ {
+    left: 10%;
+  }
+}
+@media (max-width: 576px) {
+  .categ {
+    left: 5%;
+  }
+}
+@media (max-width: 530px) {
+  .categ {
+    left: 20%;
+    width: 300px;
+    height: 650px;
+  }
+}
+@media (max-width: 440px) {
+  .categ {
+    left: 15%;
+  }
+}
+@media (max-width: 396px) {
+  .categ {
+    left: 10%;
+  }
+}
+@media (max-width: 350px) {
+  .categ {
+    left: 5%;
+  }
+}
+@media (max-width: 320px) {
+  .categ {
+    left: 2.5%;
+  }
+}

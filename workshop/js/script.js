@@ -69,10 +69,10 @@ $("#categ-2").click(function(){
 });
 
 $("#categ__add").click(function(){
-    $(".product").addClass("popup__active");
+    $(".categ").addClass("popup__active");
     $(".popup__bg").fadeIn();
         $(".popup__bg").click(function(){
-           $(".product").removeClass("popup__active");
+           $(".categ").removeClass("popup__active");
             $(".popup__bg").fadeOut();
         });
 });

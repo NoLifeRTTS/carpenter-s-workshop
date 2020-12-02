@@ -156,10 +156,13 @@
         </div>
     </div>
     <!-- Скрытый блок с добавлением новой категории -->
-    <div class="product" id = "prodAnchor">
-        <form action="addpic.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="picture">
-            <input type="submit" value="Загрузить">
+    <div class="categ" id = "prodAnchor">
+        <form action="addpic.php" method="POST" enctype="multipart/form-data">
+            <h2>Добавить категорию</h2>
+            <input type="text" name="categ__name" id="" placeholder="Название категории"> <br>
+            Загрузите картинку <br>
+            <input type="file" name="picture" > <br>
+            <input type="submit" value="Загрузить"> <br>
         </form>
     </div>
     <!--    Фон для невидимых блоков -->
