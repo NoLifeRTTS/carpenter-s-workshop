@@ -37,6 +37,18 @@
                     <li><a href="#">Доставка</a></li>
                     <li><a href="#">Возврат и гарантия</a></li>
                     <li><a href="#contacts" id = "Down">Контакты</a></li>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        ?>
+                        <li><a href="account.php"><i class="fas fa-user-alt"></i></a></li>
+                    <?php
+                    }
+                    else {
+                        ?>
+                        <li><a href="#"><i class="fas fa-user-alt" id = "account"></i></a></li>
+                        <?php
+                    }
+                    ?>
                 </ul>
                 <span class="toggle">☰</span>
                 </label>
@@ -134,6 +146,31 @@
             </div>
         </div>
     </footer>
+    <!-- Скрытый блок для регистрации -->
+    <div class="register">
+        <div class="register__inner">
+            <h2>Registration</h2>
+            <form action="register.php" method="POST">
+                <input type="text" name="username" id="username" placeholder="Username" required><br>
+                <input type="text" name="email" id="email" placeholder="Email" required><br>
+                <input type="password" name="password" id="password" placeholder="Password" required><br>
+                <input type="submit" value="Register"><br>
+                <a href="#log" id="log"><div>Login</div></a>
+            </form>
+        </div>
+    </div>
+    <!-- Скрытый блок для авторизации -->
+    <div class="author">
+        <div class="author__inner">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <input type="text" name="username" id="username" placeholder="Username" required><br>
+                <input type="password" name="password" id="password" placeholder="Password" required><br>
+                <input type="submit" value="Login"><br>
+                <a href="#log" id="reg"><div>Register</div></a>
+            </form>
+        </div>
+    </div>
     <!-- Скрытый блок с подробной информацией о категории -->
     <div class="product" id = "prodAnchor">
         <div class="product__inner">

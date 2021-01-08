@@ -76,3 +76,32 @@ $("#categ__add").click(function(){
             $(".popup__bg").fadeOut();
         });
 });
+
+// Для отображения блока регистрации, который выбрали, а также для его скрытия
+$("#account").click(function(){
+    $(".register").addClass("popup__active");
+    $(".popup__bg").fadeIn();
+    $(".popup__bg").click(function(){
+        $(".register").removeClass("popup__active");
+        $(".popup__bg").fadeOut();
+    });
+});
+$("#reg").click(function(){
+    $(".author").removeClass("popup__active");
+    $(".register").addClass("popup__active");
+    $(".popup__bg").fadeIn();
+    $(".popup__bg").click(function(){
+        $(".register").removeClass("popup__active");
+        $(".popup__bg").fadeOut();
+    });
+});
+// Для отображения блока авторизации, который выбрали, а также для его скрытия
+$("#log").click(function(){
+    $(".register").removeClass("popup__active");
+    $(".author").addClass("popup__active");
+    $(".popup__bg").fadeIn();
+    $(".popup__bg").click(function(){
+        $(".author").removeClass("popup__active");
+        $(".popup__bg").fadeOut();
+    });
+});

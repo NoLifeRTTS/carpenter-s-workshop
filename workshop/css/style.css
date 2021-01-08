@@ -534,7 +534,7 @@ a {
   left: 43%;
   top: 20%;
   border-radius: 10px;
-  background: #c5d5cb;
+  background: #F3E2A9;
   width: 400px;
   height: 400px;
   transform: scale(0);
@@ -555,7 +555,7 @@ a {
 .categ form input[type=file] {
   width: 238px;
   margin-left: 130px;
-  color: #c5d5cb;
+  color: #F3E2A9;
   font-size: 12px;
 }
 .categ form input {
@@ -615,4 +615,290 @@ a {
   .categ {
     left: 2.5%;
   }
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  position: fixed;
+  left: 43%;
+  top: 20%;
+  border-radius: 10px;
+  background: #F3E2A9;
+  width: 300px;
+  height: 300px;
+  transform: scale(0);
+  transition: 0.5s all ease;
+}
+.register.popup__active {
+  transform: scale(1);
+}
+.register h2 {
+  text-align: center;
+}
+.register form {
+  text-align: center;
+}
+.register form input[type=submit] {
+  width: 238px;
+}
+.register form input {
+  margin-top: 5px;
+}
+.register form a {
+  text-align: center;
+}
+@media (max-width: 1004px) {
+  .register {
+    left: 30%;
+  }
+}
+@media (max-width: 860px) {
+  .register {
+    left: 25%;
+  }
+}
+@media (max-width: 760px) {
+  .register {
+    left: 20%;
+  }
+}
+@media (max-width: 660px) {
+  .register {
+    left: 10%;
+  }
+}
+@media (max-width: 576px) {
+  .register {
+    left: 5%;
+  }
+}
+@media (max-width: 530px) {
+  .register {
+    left: 20%;
+    width: 300px;
+  }
+}
+@media (max-width: 440px) {
+  .register {
+    left: 15%;
+  }
+}
+@media (max-width: 396px) {
+  .register {
+    left: 10%;
+  }
+}
+@media (max-width: 350px) {
+  .register {
+    left: 5%;
+  }
+}
+@media (max-width: 320px) {
+  .register {
+    left: 2.5%;
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  position: fixed;
+  left: 43%;
+  top: 20%;
+  border-radius: 10px;
+  background: #F3E2A9;
+  width: 300px;
+  height: 300px;
+  transform: scale(0);
+  transition: 0.5s all ease;
+}
+.author.popup__active {
+  transform: scale(1);
+}
+.author h2 {
+  text-align: center;
+}
+.author form {
+  text-align: center;
+}
+.author form input[type=submit] {
+  width: 238px;
+}
+.author form input {
+  margin-top: 5px;
+}
+.author form a {
+  text-align: center;
+}
+@media (max-width: 1004px) {
+  .author {
+    left: 30%;
+  }
+}
+@media (max-width: 860px) {
+  .author {
+    left: 25%;
+  }
+}
+@media (max-width: 760px) {
+  .author {
+    left: 20%;
+  }
+}
+@media (max-width: 660px) {
+  .author {
+    left: 10%;
+  }
+}
+@media (max-width: 576px) {
+  .author {
+    left: 5%;
+  }
+}
+@media (max-width: 530px) {
+  .author {
+    left: 20%;
+    width: 300px;
+  }
+}
+@media (max-width: 440px) {
+  .author {
+    left: 15%;
+  }
+}
+@media (max-width: 396px) {
+  .author {
+    left: 10%;
+  }
+}
+@media (max-width: 350px) {
+  .author {
+    left: 5%;
+  }
+}
+@media (max-width: 320px) {
+  .author {
+    left: 2.5%;
+  }
+}
+
+.account {
+  margin-top: 70px;
+  display: fixed;
+}
+.account__title {
+  font-size: 30px;
+  text-align: center;
+}
+.account__info {
+  margin-left: 30%;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 450px;
+}
+.account__info .personalInfo {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.account__info .personalInfo__info {
+  text-align: left;
+  width: 50%;
+}
+.account__info .personalInfo__subinfo {
+  text-align: left;
+  width: 50%;
+  border: 1px solid;
+}
+.account__info .logout {
+  padding: 20px;
+  text-align: center;
+}
+.account__info .logout a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid;
+}
+.account__info .logout a:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: gray;
+}
+
+@media screen and (max-width: 1000px) {
+  .account__info {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .account__info {
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 765px) {
+  .account__info {
+    margin-left: 18%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .account__info {
+    margin-left: 13%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .account__info {
+    margin-left: 9%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .account__info {
+    margin-left: 20%;
+    width: 300px;
+  }
+  .account__info .personalInfo__info {
+    font-size: 10px;
+    text-align: left;
+    width: 50%;
+  }
+  .account__info .personalInfo__subinfo {
+    font-size: 10px;
+    text-align: left;
+    width: 50%;
+    border: 1px solid;
+  }
+}
+@media screen and (max-width: 450px) {
+  .account__info {
+    margin-left: 10%;
+  }
+}
+.basket {
+  margin-top: 70px;
+}
+.basket__title {
+  font-size: 30px;
+  text-align: center;
+}
+.basket__block {
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.basket__block table {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+.basket__block table tr {
+  border: 1px solid;
+}
+.basket__block table td {
+  border: 1px solid;
 }
