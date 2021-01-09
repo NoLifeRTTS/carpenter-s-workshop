@@ -2,6 +2,7 @@
     session_start();
     $conn = mysqli_connect('localhost', 'mysql', 'mysql');
     $select_db = mysqli_select_db($conn, 'workshop');
+    $categid = $_SESSION['categid'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,10 +76,10 @@
             <div class="wrapper">
                 <div class="category__listblock">
                     <div class="category__list">
-                        <h2 class="category__title">Категории</h2>
+                        <h2 class="category__title">Товары</h2>
                         <ul class="category__sublist">
                             <?php
-                                $query = "SELECT categoryName, categoryId FROM categories ";
+                                $query = "SELECT productName, cardId FROM catalog WHERE category = '$categid' ";
                                 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                                 if($result) {
                                     $rows = mysqli_num_rows($result); // количество полученных строк
@@ -96,7 +97,7 @@
                 <div class="category__catalog">
                     <div class="category__cards">
                         <?php
-                            $query1 = "SELECT categoryName, link, categoryId FROM categories ";
+                            $query1 = "SELECT productName, link, cardId FROM catalog WHERE category = '$categid' ";
                             $result1 = mysqli_query($conn, $query1) or die(mysqli_error($conn));
                             if($result1) {
                                 $rows = mysqli_num_rows($result1); // количество полученных строк
@@ -118,7 +119,7 @@
                         <a href="#up" id="categ__add"><div class="category__card">
                             <img class="category__card__img" src="/img/plus.png" alt="">
                             <div class="category__card__container">
-                                <p class="name">Добавить категорию</p>
+                                <p class="name">Добавить товар</p>
                             </div>
                         </div></a>
                         <?php
@@ -199,11 +200,13 @@
     </div>
     <!-- Скрытый блок с добавлением новой категории -->
     <div class="categ" id = "prodAnchor">
-        <form action="addpic.php" method="POST" enctype="multipart/form-data">
-            <h2>Добавить категорию</h2>
-            <input type="text" name="categ__name" id="" placeholder="Название категории"> <br>
+        <form action="addprod.php" method="POST" enctype="multipart/form-data">
+            <h2>Добавить товар</h2>
+            <input type="text" name="categ__name" id="" placeholder="Название товара"> <br>
             Загрузите картинку <br>
             <input type="file" name="picture" > <br>
+            <input type="text" name="card__desc" id=""placeholder="Описание товара"> <br>
+            <input type="text" name="card__price" id=""placeholder="Цена"> <br>
             <input type="submit" value="Загрузить"> <br>
         </form>
     </div>
@@ -217,6 +220,5 @@
     <script  src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
     <!-- СКРИПТ -->
     <script src="js/script.js"></script>
-    <script src="js/ajax.js"></script>
 </body>
 </html>

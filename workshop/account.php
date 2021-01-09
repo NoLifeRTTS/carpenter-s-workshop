@@ -61,7 +61,7 @@
                     <?php
                     if (isset($_SESSION['username'])) {
                         ?>
-                        <li><a href="account.php"><i class="fas fa-user-alt"></i></a></li>
+                        <li><a href="account.php"><i class="fas fa-user-alt"></i><?php echo "  ".$_SESSION['username'] ?></a></li>
                     <?php
                     }
                     else {
@@ -78,7 +78,7 @@
          <!-- БЛОК ШАПКИ -->
          <section class = "head">
              <div class="wrapper">
-                <a href=""><img src="img/logo.jpg" alt="logo" class="head__logo"></a>
+                <a href="catalog.php"><img src="img/logo.jpg" alt="logo" class="head__logo"></a>
                 <p class="head__text">Телефон: <br> 8(888)-888-88-88</p>
                 <p class="head__text">Режим работы: <br> 9:00 - 21:00</p>
                 <div class="head__button">

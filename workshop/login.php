@@ -23,7 +23,7 @@
             $username = $_SESSION['username'];
             $password = $_SESSION['password'];
             echo "<HTML><HEAD>
-            <META HTTP-EQUIV='Refresh' CONTENT=' 0; URL=account.php ' >
+            <META HTTP-EQUIV='Refresh' CONTENT=' 0; URL=catalog.php ' >
             </HEAD>";
         }
     }
